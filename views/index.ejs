@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <div>
+      <h1>All Categories</h1>
+      <a href="/newCategory">Add Category</a>
+      <ul>
+        <% categories.forEach(category => { %>
+        <li><%= category.name %></li>
+        <% }) %>
+      </ul>
+    </div>
+
+    <div>
+      <h1>All Products</h1>
+      <a href="/newProduct">Add Product</a>
+      <ul>
+        <% products.forEach(product => { %>
+        <li><%= product.name %></li>
+        <% }) %>
+      </ul>
+    </div>
+  </body>
+</html>
