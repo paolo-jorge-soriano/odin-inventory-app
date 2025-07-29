@@ -10,8 +10,13 @@ CREATE TABLE IF NOT EXISTS categories (
 CREATE TABLE IF NOT EXISTS products (
   id SERIAL PRIMARY KEY,
   name TEXT NOT NULL,
-  category_id INTEGER REFERENCES categories(id) ON DELETE SET NULL
+  category_id INTEGER REFERENCES categories(id) ON DELETE CASCADE
 );
+
+INSERT INTO categories (name) VALUES 
+  ('Action'),
+  ('RPG'),
+  ('Puzzle');
 
 INSERT INTO products (name, category_id) VALUES
   ('DOOM', 1),

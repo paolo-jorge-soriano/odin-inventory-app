@@ -7,16 +7,11 @@
   </head>
   <body>
     <div>
-      <a href="/categories">Browse Categories</a>
-      <a href="/products">Browse Products</a>
-    </div>
-
-    <div>
-      <h1>All Products</h1>
-      <a href="/newProduct">Add Product</a>
+      <h1>All Categories</h1>
+      <a href="/categories/newCategory">Add Category</a>
       <ul>
-        <% products.forEach(product => { %>
-        <li><%= product.name %></li>
+        <% categories.forEach(category => { %>
+        <li><%= category.name %></li>
         <% }) %>
       </ul>
     </div>

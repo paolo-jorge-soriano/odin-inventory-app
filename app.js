@@ -6,6 +6,8 @@ const path = require("node:path");
 
 // Routers here
 const indexRouter = require("./routes/indexRouter");
+const categoriesRouter = require("./routes/categoriesRouter");
+const productsRouter = require("./routes/productsRouter");
 
 // HTML
 app.set("views", path.join(__dirname, "views"));
@@ -20,6 +22,8 @@ app.use(express.static(assetsPath));
 
 // Routes here
 app.use("/", indexRouter);
+app.use("/categories", categoriesRouter);
+app.use("/products", productsRouter);
 
 // Start server
 const PORT = process.env.PORT || 3000;
