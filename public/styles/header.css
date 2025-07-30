@@ -1,0 +1,23 @@
+.header {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr 1fr;
+  background-color: aliceblue;
+  padding: 10px 50px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navbar > a {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+}
