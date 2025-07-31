@@ -22,8 +22,16 @@ async function postNewProductForm(req, res) {
   res.redirect("/");
 }
 
+async function deleteProductData(req, res) {
+  const id = req.params.id;
+  console.log(id);
+  await db.deleteProduct(id);
+  res.redirect("/products");
+}
+
 module.exports = {
   getProductsPage,
   getNewProductForm,
   postNewProductForm,
+  deleteProductData,
 };

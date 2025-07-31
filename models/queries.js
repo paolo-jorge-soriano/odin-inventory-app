@@ -18,9 +18,14 @@ async function insertProduct(productName, productCategory) {
   await pool.query("INSERT INTO products (name, category_id) VALUES ($1, $2)", [productName, productCategory]);
 }
 
+async function deleteProduct(id) {
+  await pool.query("DELETE FROM products WHERE id = $1", [id]);
+}
+
 module.exports = {
   getAllProducts,
   getAllCategories,
   insertCategory,
   insertProduct,
+  deleteProduct,
 };

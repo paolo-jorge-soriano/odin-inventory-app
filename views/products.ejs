@@ -23,6 +23,9 @@
           <% products.forEach(product => { %>
           <div class="card">
             <h3><%= product.name %></h3>
+            <form action="/products/<%= product.id %>" method="POST">
+              <button type="submit">Delete</button>
+            </form>
           </div>
           <% }) %>
         </div>
