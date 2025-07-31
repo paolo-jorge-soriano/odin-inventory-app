@@ -3,13 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/newCategory.css" />
     <title><%= title %></title>
   </head>
   <body>
-    <form action="/newCategory" method="POST">
-      <label for="categoryName">Category Name:</label>
-      <input type="text" id="categoryName" name="categoryName" />
-      <button type="submit">Add Category</button>
-    </form>
+    <div class="app">
+      <%- include("partials/header") %>
+
+      <main class="form-container">
+        <div class="heading-container">
+          <h1><%= title %></h1>
+        </div>
+
+        <form action="/newCategory" method="POST" class="new-category-form">
+          <div class="form-field">
+            <label for="categoryName">Category Name:</label>
+            <input type="text" id="categoryName" name="categoryName" />
+          </div>
+          <button type="submit" class="btn-submit">Add Category</button>
+        </form>
+      </main>
+
+      <%- include("partials/footer") %>
+    </div>
   </body>
 </html>

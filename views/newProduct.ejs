@@ -3,21 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/newProduct.css" />
     <title><%= title %></title>
   </head>
   <body>
-    <form action="/newProduct" method="POST">
-      <label for="productName">Product Name:</label>
-      <input type="text" id="productName" name="productName" />
+    <div class="app">
+      <%- include("partials/header") %>
 
-      <label for="productCategory">Category:</label>
-      <select id="productCategory" name="productCategory">
-        <% categories.forEach(category => { %>
-        <option value="<%= category.id %>"><%= category.name %></option>
-        <% }) %>
-      </select>
+      <main class="form-container">
+        <div class="heading-container">
+          <h1><%= title %></h1>
+        </div>
 
-      <button type="submit">Add Product</button>
-    </form>
+        <form action="/newProduct" method="POST" class="new-product-form">
+          <div class="form-field-container">
+            <div class="form-field">
+              <label for="productName">Product Name:</label>
+              <input type="text" id="productName" name="productName" />
+            </div>
+
+            <div class="form-field">
+              <label for="productCategory">Category:</label>
+              <select id="productCategory" name="productCategory">
+                <% categories.forEach(category => { %>
+                <option value="<%= category.id %>"><%= category.name %></option>
+                <% }) %>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn-submit">Add Product</button>
+        </form>
+      </main>
+
+      <%- include("partials/footer") %>
+    </div>
   </body>
 </html>

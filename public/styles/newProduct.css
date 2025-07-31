@@ -1,0 +1,40 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 50px;
+  gap: 30px;
+}
+
+.new-product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-field > label {
+  font-size: 1.5rem;
+}
+
+.form-field > input[type="text"],
+.form-field > select {
+  font-size: 1.2rem;
+  border: 2px solid var(--black);
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.btn-submit {
+  border: 2px solid var(--black);
+  border-radius: 50px;
+  padding: 10px;
+  background-color: var(--black);
+  color: white;
+  font-weight: bold;
+}
