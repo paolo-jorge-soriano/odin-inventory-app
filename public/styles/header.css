@@ -2,8 +2,14 @@
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 2fr 1fr;
-  background-color: aliceblue;
+  background-color: var(--black);
   padding: 10px 50px;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.brand {
+  width: fit-content;
 }
 
 .navbar {
@@ -12,9 +18,13 @@
   gap: 30px;
 }
 
-.navbar > a {
+.nav-link {
   font-size: 1.3rem;
   font-weight: bold;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
 }
 
 .search-container {

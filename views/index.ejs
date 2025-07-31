@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
     <link rel="stylesheet" href="/styles/index.css" />
     <title><%= title %></title>
   </head>
@@ -19,11 +20,13 @@
           in one place.
         </p>
 
-        <div class="hero-links">
-          <a href="/categories">Browse Categories</a>
-          <a href="/products">Browse Products</a>
+        <div class="hero-nav">
+          <a href="/categories" class="hero-nav-link">Browse Categories</a>
+          <a href="/products" class="hero-nav-link">Browse Products</a>
         </div>
       </main>
+
+      <%- include("partials/footer") %>
     </div>
   </body>
 </html>
